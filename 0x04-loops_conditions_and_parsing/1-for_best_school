@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # print str ten times
 
-for(x=1; x <= 10; x++); do
+for ((x=1; x <= 10; x++)); do
   echo "Best School"
 done
