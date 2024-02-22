@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-# print str ten times but with while loop 
-
-x=0
-
-while [ "$x" -lt 10 ]; do
-  echo "Best School"
-  ((i++))
-done
