@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# print 'bad luck' if x = 4 and 'your chance' if x = 8
+
+x=1
+
+while [ "$x" -lt 11 ]; do
+
+  if [ "$x" -eq 4 ]; then
+    echo "bad luck"
+  elif [ "$x" -eq 8 ]; then
+    echo "good luck"
+  else
+    echo "Best School"
+  fi
+
+  ((x++))
+done

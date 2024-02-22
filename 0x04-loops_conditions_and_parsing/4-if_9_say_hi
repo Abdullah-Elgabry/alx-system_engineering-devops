@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# print str ten times but with while loop and if statment
+
+x=1
+
+while [ "$x" -lt 11 ]; do
+  echo "Best School"
+  
+  # condition to print hi if x = 9
+
+  if [ "$x" -eq 9 ]; then
+    echo "Hi"
+  fi
+
+  ((x++))
+done

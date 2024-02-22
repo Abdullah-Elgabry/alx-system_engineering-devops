@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# print the time with the 12 h and 59 min
+
+clock_hours=0
+
+while [ "$clock_hours" -le 12 ]; do
+  echo "Hour: $clock_hours"
+  
+  clock_minute=1
+  
+  while [ "$clock_minute" -lt 60 ]; do
+    echo "$clock_minute"
+    clock_minute=$((clock_minute + 1))
+  done
+
+  clock_hours=$((clock_hours + 1))
+done

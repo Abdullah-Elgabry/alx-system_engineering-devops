@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# print numbers from 1 -> 20 but with some conditions
+
+x=1
+
+while [ "$x" -lt 21 ]; do
+  
+  case "$x" in
+    4)
+      echo "$x"
+      echo "bad luck from China"
+      ;;
+    9)
+      echo "$x"
+      echo "bad luck from Japan"
+      ;;
+    17)
+      echo "$x"
+      echo "bad luck from Italy"
+      ;;
+    *)
+      echo "$x"
+      ;;
+  esac
+
+  ((x++))
+done

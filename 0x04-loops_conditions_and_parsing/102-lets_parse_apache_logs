@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# this script will displays the visitor IP
+
+awk '{print $1,$9}' apache-access.log
