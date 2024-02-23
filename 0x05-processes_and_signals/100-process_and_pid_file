@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script will 
+# This script will
 # 1- make a file and put the pid in it
 # 2- show a chain of strings
 # 3- will del the file created in first step
