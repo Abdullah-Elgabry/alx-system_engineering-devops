@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# this script will Kill the brev script
+
+pkill -f -SIGKILL 7-highlander

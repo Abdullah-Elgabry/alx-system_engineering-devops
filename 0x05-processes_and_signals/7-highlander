@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# this script will show the string [To infinity and beyond]with sleep 2
+# and string [I am invincible!!!] after each iteration
+
+while true
+
+do
+
+  echo "To infinity and beyond"
+
+  sleep 2
+
+  trap 'echo "I am invincible!!!"' SIGTERM 
+
+done
