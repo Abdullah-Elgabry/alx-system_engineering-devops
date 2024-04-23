@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # adjust new server with port(80)
 
-echo -e "Nginx installing....\n"
+echo -e "Updating and installing Nginx.\n"
 sudo apt-get update -y -qq && \
 	 sudo apt-get install nginx -y
 
-echo -e "\nworing on stuff process.\n"
+echo -e "\nSetting up some minor stuff.\n"
 
 sudo service nginx start
 
@@ -22,5 +22,7 @@ sudo sed -i '24i\	rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUl
 
 echo "Ceci n'est pas une page" >> /var/www/html/error_404.html
 sudo sed -i '25i\	error_page 404 /error_404.html;' /etc/nginx/sites-available/default
+
 sudo service nginx restart
+
 echo -e "\nCompleted.\n"
