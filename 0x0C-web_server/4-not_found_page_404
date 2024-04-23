@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# adjust new server with port(80)s
+# adjust new server with port(80)
 
 echo -e "Nginx installing....\n"
 sudo apt-get update -y -qq && \
