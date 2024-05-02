@@ -1,11 +1,18 @@
 #!/usr/bin/env bash
 # this script will print the domains && sub-domains
 
-if [ $# -eq 2 ]; then
-    dig "$2.$1" | grep -A1 "ANSWER SECTION:" | sed "s/$2.$1./$2/" | awk -F" " 'NR==2 {print "The subdomain " $1 " is a " $4 " record and points to " $5}'
-else
-    arr=("www" "lb-01" "web-01" "web-02")
-    for sub in "${arr[@]}"; do
-        dig "$sub.$1" | grep -A1 "ANSWER SECTION:" | sed "s/$sub.$1./$sub/g" | awk -F" " 'NR==2 {print "The subdomain " $1 " is a " $4 " record and points to " $5}'
-    done
+domain_information () {
+    line=$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tr '\t' '\n' | tail -2 | tr '\n' ' ')
+    echo "$2 $line" | awk '{print "The subdomain " $1 " is a " $2 " record and points to " $3}'
+}
+
+if [ "$#" == 1 ]
+then
+  domain_information "$1" "www"
+  domain_information "$1" "lb-01"
+  domain_information "$1" "web-01"
+  domain_information "$1" "web-02"
+elif [ "$#" == 2 ]
+then
+  domain_information "$1" "$2"
 fi
