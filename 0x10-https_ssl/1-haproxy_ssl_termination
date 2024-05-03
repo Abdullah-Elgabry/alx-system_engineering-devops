@@ -39,7 +39,7 @@ frontend abdullahelgabry-frontend
         default_backend abdullahelgabry-backend
 
 frontend abdullahelgabry-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/www.abdullahelgabry.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/abdullahelgabry.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend abdullahelgabry-backend
 
