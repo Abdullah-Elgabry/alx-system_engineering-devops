@@ -6,9 +6,10 @@ first ten popular posts titles getter.
 
 from requests import get
 
+
 def top_ten(subreddit):
     """
-    top_ten for getting the most poular ten posts.
+    top_ten for getting the most poular ten posts
     """
 
     if subreddit is None or not isinstance(subreddit, str):
